@@ -243,7 +243,7 @@ export const getImports = (env: EnvData) => {
 }
 
 export function parseYaml (file: string): TestCase[] {
-  const testCase = safeLoad(file)
+  const testCase: any = safeLoad(file)
   const scripts = testCase.beacon_state.execution_scripts
   const shardBlocks = testCase.shard_blocks
   const testCases = []
